@@ -1,0 +1,104 @@
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; 
+  background: darkblue;
+  background-image: linear-gradient(115deg, rgba(58,58,158, 0.8), rgba(136,136,206,0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  /* background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg); */
+  background-position-x: center;
+  background-position-y:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+body {
+
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  font-weight:400 ;
+  font-size: larger;
+}
+
+#title {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* use bg color with rgba instead of set opacity to save children from being too transparent */
+  background-color:rgba(0,0,0,0.5);
+  /* align-content: right; */
+  justify-content: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius:0.25em;
+  box-sizing: border-box;
+  padding: 1em 1em;
+}
+form {
+  width: 100%;
+}
+a {
+  color: #00B7FF;
+}
+
+.text-center {
+  text-align: center;
+}
+label {
+  /* doesn't work because label is inline? */
+  /* Use input margin top instead */
+  margin-bottom: 1em;
+}
+.form-group {
+opacity: 1 !important;
+padding: .5em 1em;  
+font-size: large;
+
+}
+input {
+  font-size: medium;
+}
+
+input, select {
+  margin-top: 1em;
+  padding: 10px 1em;
+  border-radius:.25rem;
+  border: 2px solid white;
+}
+.form-group > input[type="text"], input[type="number"], input[type="email"], select {
+  width: 100%;
+}
+
+.form-group > textarea {
+  width: 100%;
+  min-height: 120px;
+  font-size: large;
+  resize: vertical;
+  margin-top: 1em;
+  border: 2px solid white;
+}
+input[type="text-area"]::placeholder {
+  /* transform: translateY(-30px); */
+}
+.form-group > input[type="radio"], input[type="checked"] {
+  transform: scale(1.5);
+  margin: .5em 1em;
+}
+
+/* wtf does this do?! */
+/* Paul Irish knows  */
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+/* this fixes issues with making input widths fit container properly */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
